@@ -1,0 +1,313 @@
+:root {
+  --primary-color: #3a86ff;
+  --secondary-color: #3276e3;
+  --background-color: #14213d;
+  --text-color: #ddd;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.header-text {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.header-text h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.header-text p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+#navbar-list ul {
+  background-color: var(--background-color);
+  border-radius: 3rem;
+  max-width: fit-content;
+  padding: 10px 0;
+  margin: 0 auto;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#navbar-list ul li {
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0 1rem;
+}
+
+#navbar-list ul li a {
+  color: var(--secondary-color);
+  padding: 8px 16px;
+}
+
+#navbar-list ul li a:hover {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  border-radius: 3rem;
+  padding: 8px 16px;
+  transition: 0.3s ease;
+}
+
+section {
+  margin: 20px 200px;
+  padding: 20px;
+  border-radius: 0.5rem;
+}
+
+#biodata {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 80px;
+  color: #3276e3;
+  padding: 2rem 4rem;
+}
+
+#biodata .biodata-teks {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#biodata .biodata-teks p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#biodata .biodata-teks h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  border-bottom: var(--primary-color) solid 2px;
+  padding-bottom: 0.5rem;
+}
+
+#biodata img {
+  width: 240 px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 3%;
+  border: 5px solid var(--primary-color);
+  box-shadow: 0px 0px 5px var(--secondary-color);
+}
+
+#pendidikan {
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 2rem 4rem;
+}
+
+#pendidikan h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  border-bottom: var(--primary-color) 2px solid;
+  padding-bottom: 10px;
+}
+
+#pendidikan ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#pendidikan ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#skills {
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 2rem 4rem;
+}
+
+#skills h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  border-bottom: var(--primary-color) 2px solid;
+}
+
+#skills p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--background-color);
+}
+
+footer a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  section {
+    margin: 20px 100px;
+    padding: 20px;
+  }
+
+  #biodata {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  #biodata img {
+    width: 260px;
+    height: 260px;
+  }
+
+  #biodata .biodata-teks h2 {
+    font-size: 28px;
+  }
+
+  #biodata .biodata-teks p {
+    font-size: 16px;
+  }
+
+  #pendidikan h2,
+  #skills h2 {
+    font-size: 28px;
+  }
+
+  #pendidikan ul li,
+  #skills p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    margin: 20px 50px;
+    padding: 20px;
+  }
+
+  #navbar-list ul {
+    padding: 10px;
+  }
+
+  #navbar-list ul li {
+    font-size: 14px;
+  }
+
+  #biodata img {
+    width: 300px;
+    height: 300px;
+  }
+
+  #biodata .biodata-teks h2 {
+    font-size: 30px;
+  }
+
+  #biodata .biodata-teks p {
+    font-size: 18px;
+  }
+
+  #pendidikan h2,
+  #skills h2 {
+    font-size: 30px;
+  }
+
+  #pendidikan ul li,
+  #skills p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    margin: 10px 20px;
+    padding: 10px;
+  }
+
+  #navbar-list ul {
+    padding: 5px;
+  }
+
+  #navbar-list ul li {
+    font-size: 12px;
+    padding: 0 0.5rem;
+  }
+
+  #biodata {
+    gap: 30px;
+  }
+
+  #biodata img {
+    max-width: 200px;
+    height: 200px;
+  }
+
+  #biodata .biodata-teks h2 {
+    font-size: 20px;
+  }
+
+  #biodata .biodata-teks p {
+    font-size: 12px;
+  }
+
+  #pendidikan h2,
+  #skills h2 {
+    font-size: 20px;
+  }
+
+  #pendidikan ul li,
+  #skills p {
+    font-size: 12px;
+  }
+}
